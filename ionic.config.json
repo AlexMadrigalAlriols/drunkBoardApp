@@ -1,0 +1,7 @@
+{
+  "name": "drunkBoardApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
