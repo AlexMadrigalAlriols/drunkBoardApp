@@ -1,0 +1,49 @@
+.bg-container {
+  background-image: url("/assets/img/background_join_game_movile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.nav-bar {
+  background-color: rgba(0, 0, 0, 0.829);
+}
+
+.btn-play {
+  border-color: var(--secondary-color);
+  border-radius: 20px;
+  color: rgb(249, 54, 129);
+  padding: 12px;
+  font-weight: 400;
+  box-shadow: 0 0 30px rgb(249, 54, 129);
+}
+
+.nav-inputs {
+  background-color: rgba(62, 6, 105, 0.767);
+  color: white;
+  text-align: center;
+  margin-right: 0.75rem !important;
+}
+
+.nav-inputs .icon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -7px;
+  left: -10px;
+}
+
+.nav-inputs .add {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -3px;
+  right: -10px;
+}
+
+@media (max-width: 700px) {
+  .bg-container {
+      background-image: url("/assets/img/background_join_game_movile.png");
+      height: 100%;
+  }
+}

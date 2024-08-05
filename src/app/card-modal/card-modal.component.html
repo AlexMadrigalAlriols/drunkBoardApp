@@ -1,0 +1,11 @@
+<div class="overlay" *ngIf="visible">
+  <div class="card-container" (click)="toggleCard()">
+    <div class="card" [ngClass]="{'show-front': showFront, 'exit': exiting}">
+      <div class="card-face card-back card-{{type}}">
+      </div>
+      <div class="card-face card-front">
+        <p>{{ text }}</p>
+      </div>
+    </div>
+  </div>
+</div>

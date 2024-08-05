@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <div class="home-section" *ngIf="!gameStarted">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-white config-container">
+          <h1 class="text-center">Lobby of {{gameCreator?.name}}</h1>
+          <p class="text-center">Code: #{{lobbyId}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="text-center container">
+            <div class="row text-white">
+              <div class="col-12 players-list">
+                <div class="row text-start pt-4 px-2 player" *ngFor="let player of players">
+                  <div class="col-2">
+                    <img src="{{player.profile_img}}" class="img-fluid rounded-circle" alt="Avatar">
+                  </div>
+                  <div class="col-6">
+                    {{player.name}}
+                    <p>Sin titulo</p>
+                  </div>
+                  <div class="col-4 text-end" *ngIf="gameCreator && gameCreator.id == user.id && gameCreator.id != player.id">
+                    <img src="assets/img/navbar/crown_button.png" width="40" height="40" alt="" class="me-2" (click)="giveOwner(player.id)">
+                    <img src="assets/img/navbar/cross_button.png" width="40" height="40" alt="" (click)="kickPlayer(player.id)">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn btn-login w-100" (click)="startGame()" *ngIf="gameCreator && gameCreator.id == user.id"><i class="fa-regular fa-circle-play me-2"></i> Start Game</a>
+            <a class="btn btn-login w-100" (click)="leaveLobby()"><i class="fa-solid fa-arrow-left-long me-2"></i> Exit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-board *ngIf="gameStarted" [players]="players" [lobbyId]="lobbyId" [turnPlayer]="turnPlayer" [cells]="board.cells"></app-board>
+</ion-content>

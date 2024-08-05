@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <div class="home-section">
+    <div class="container">
+      <div class="row">
+        <div class="div" style="background-color: #02001fe5;">
+          <div class="mx-1 my-1">
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="text-center container">
+            <img src="assets/img/Logo.png" alt="" width="600" class="img-fluid">
+            <div class="form-floating mb-2 mt-5">
+                <input type="email" class="form-control" [(ngModel)]="lobbyId" id="emailInput" placeholder="name@example.com"/>
+                <label for="emailInput" class="text-white">Enter code</label>
+            </div>
+            <a class="btn btn-login w-100" (click)="joinLobby()"><i class="fa-regular fa-circle-play me-2"></i> Join Lobby</a>
+            <a class="btn btn-login w-100" href="/tabs/home"><i class="fa-solid fa-arrow-left-long me-2"></i> Go Back</a>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </div>
+</ion-content>

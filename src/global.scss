@@ -11,6 +11,7 @@
 
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
 /* Basic CSS for apps built with Ionic */
 @import "@ionic/angular/css/normalize.css";
@@ -25,6 +26,8 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------
@@ -34,4 +37,20 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+
+.btn-login {
+  border-color: var(--secondary-color);
+  border-radius: 20px;
+  color: rgb(249, 54, 129);
+  padding: 12px;
+  font-weight: 400;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 30px rgb(249, 54, 129);
+}
+
+.btn-login:hover {
+  box-shadow: 0 0 30px rgb(249, 54, 129);
+  color: rgb(249, 54, 129);
+  border-color: var(--secondary-color);
+}

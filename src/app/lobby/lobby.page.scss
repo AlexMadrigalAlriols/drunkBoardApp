@@ -1,0 +1,42 @@
+.home-section{
+  background-image: url("/assets/img/background_join_game.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.players-list {
+  border-color: white;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: rgba(15, 16, 89, 0.74);
+  min-height: 15rem;
+  max-height: 25rem;
+  overflow-y: auto;
+  border-top: 0;
+}
+
+.config-container {
+  border-color: white;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: rgba(15, 16, 89, 0.74);
+  overflow-y: auto;
+}
+
+.players-list .player {
+  border: 1px solid white;
+}
+
+.custom-toast {
+  border: 5px solid white !important; /* Borde personalizado */
+}
+
+@media (max-width: 700px) {
+  .home-section {
+      background-image: url("/assets/img/background_join_game_movile.png");
+      height: 100%;
+  }
+}

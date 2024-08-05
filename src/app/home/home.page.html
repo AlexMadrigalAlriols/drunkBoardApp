@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+  <div class="bg-container">
+    <div class="nav-bar">
+      <div class="row p-2">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-4">
+              <img src="{{ user.profile_img ?? 'assets/img/default/default_profile0.png' }}" alt="profile_img" class="rounded-circle" width="50">
+            </div>
+            <div class="col-8 ms-0 ps-0 mt-1">
+              <span class="text-white">&#64; {{ user.name }}</span>
+              <p class="my-0 text-white" style="font-size: 12px;">Sin Titulo</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 text-end mt-2">
+          <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7">
+              <div class="card nav-inputs">
+                <img src="assets/img/navbar/glass_points.png" class="icon">
+                <span class=""><b>328</b></span>
+                <img src="assets/img/navbar/add.png" class="add">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img src="assets/img/Logo.png" alt="logo">
+
+    <div class="row px-5 py-2">
+      <a href="/tabs/join-lobby">
+        <img src="assets/img/JoinBtn.png" alt="JoinBtn">
+      </a>
+
+      <img src="assets/img/CreateBtn.png" alt="" class="img-fluid" (click)="createGame()">
+    </div>
+  </div>
+</ion-content>

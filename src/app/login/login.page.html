@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  <div class="login-container">
+    <div class="container">
+        <form (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm" autocomplete="off" >
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card login-card mt-5">
+                        <div class="text-center container">
+                            <img src="assets/img/Logo.png" alt="" width="450" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <div class="form-floating mt-3">
+                                <input type="email" class="form-control" id="email" required [(ngModel)]="email" [ngClass]="{'is-invalid': error}" name="email" placeholder="name@example.com"/>
+                                <label for="email">Email</label>
+                            </div>
+
+                            <div class="text-start" *ngIf="error">
+                              <span class="text-danger">The credentials do not match our records.</span>
+                            </div>
+
+                            <div class="form-floating mt-3">
+                                <input type="password" class="form-control" id="password" required [(ngModel)]="password" name="password" placeholder="pass"/>
+                                <label for="password">Password</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-login w-100 mt-3" [disabled]="!loginForm.form.valid">Join The Party</button>
+                            <p class="text-center mt-2">Don't have an account yet? <a href="/register">Register here</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </form>
+    </div>
+  </div>
+</ion-content>

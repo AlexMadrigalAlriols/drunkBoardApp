@@ -1,0 +1,106 @@
+.bg-container {
+  background-image: url("/assets/img/background_join_game_movile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 2px;
+  border: 1px solid #333;
+  background-color: white;
+  width: 95vw;
+  height: 50vh;
+  margin: 0 auto;
+}
+
+.board-container {
+  padding-top: 2rem;
+}
+
+.cell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: calc(1.5vw + 1.5vh);
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cell:nth-child(odd) {
+  background-color: #eee;
+}
+
+.cell .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+}
+
+.start {
+  background-color: #ffeb3b;
+  font-weight: bold;
+  font-size: calc(1.8vw + 1.8vh);
+}
+
+.end {
+  background-color: #f44336;
+  font-weight: bold;
+  font-size: calc(1.8vw + 1.8vh);
+  color: white;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.players div {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 0.75em;
+  margin: 2px 0;
+  bottom: 5px;
+}
+
+.dice-button {
+  width: 75px;
+  height: 75px;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: rgb(249, 54, 129) 1px solid;
+  box-shadow: 0 0 30px rgb(249, 54, 129);
+  margin-top: 2rem !important;
+}
+
+.dice-1 { background-image: url('/assets/img/dice/side_1.png'); }
+.dice-2 { background-image: url('/assets/img/dice/side_2.png'); }
+.dice-3 { background-image: url('/assets/img/dice/side_3.png'); }
+.dice-4 { background-image: url('/assets/img/dice/side_4.png'); }
+.dice-5 { background-image: url('/assets/img/dice/side_5.png'); }
+.dice-6 { background-image: url('/assets/img/dice/side_6.png'); }

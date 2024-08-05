@@ -1,0 +1,52 @@
+<ion-content>
+  <div class="bg-container">
+    <div class="player-container">
+        <div class="row text-white mb-3">
+          <div class="col-6">
+            <b>PLAYERS:</b>
+          </div>
+          <div class="col-6 text-end">
+            <div class="row">
+              <div class="col-5"></div>
+              <div class="col-7">
+                <div class="card nav-inputs">
+                  <img src="assets/img/navbar/glass_points.png" class="icon">
+                  <span class=""><b>328</b></span>
+                  <img src="assets/img/navbar/add.png" class="add">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img src="{{ player.profile_img }}" [ngStyle]="{'opacity': turnPlayer?.id == player.id ? 1 : 0.25}" class="rounded-circle mx-2" width="50" height="50" *ngFor="let player of players">
+    </div>
+    <div class="board-container">
+      <div class="board">
+        <div *ngFor="let cell of spiralCells; let i = index"
+             [ngClass]="{
+               'cell': true,
+               'start': cell.event === 'start',
+               'end': cell.event === 'end'
+             }"
+             [ngStyle]="{'background-image': 'url(' + cell.background + ')'}"
+             data-id="{{cell.id}}">
+          <div *ngIf="cell.event !== 'start' && cell.event !== 'end'" class="number">{{ cell.id }}</div>
+          <div class="players">
+            <div *ngFor="let player of cell.players"
+              [ngStyle]="{'background-image': 'url(' + player.profile_img + ')'}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="text-center">
+        <button class="dice-button dice-{{diceResult}}" (click)="rollDice()" [disabled]="user?.id != turnPlayer?.id"></button>
+      </div>
+    </div>
+  </div>
+
+  <app-card-modal></app-card-modal>
+</ion-content>
